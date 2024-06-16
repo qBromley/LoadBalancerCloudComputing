@@ -1,9 +1,9 @@
 #include <string>
-#define REQUEST.CPP
-
+#define REQUEST_CPP
+using namespace std;
 struct request
 {
-    std::string ip_in;
-    std::string ip_out;
+    string ip_in;
+    string ip_out;
     int process_time;
 };
