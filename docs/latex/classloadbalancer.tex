@@ -1,0 +1,112 @@
+\hypertarget{classloadbalancer}{}\doxysection{loadbalancer Class Reference}
+\label{classloadbalancer}\index{loadbalancer@{loadbalancer}}
+
+
+Manages the distribution and processing of requests in a web server environment.  
+
+
+
+
+{\ttfamily \#include $<$loadbalancer.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classloadbalancer_ad453fd2fc0c910f82ef31c18353fc774}{loadbalancer}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the loadbalancer class. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classloadbalancer_afc308893c7ab0fc8b92036deae7a2de9}{get\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current system time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classloadbalancer_a8754005b28e5d0800cd7048ed9caefa0}\label{classloadbalancer_a8754005b28e5d0800cd7048ed9caefa0}} 
+void \mbox{\hyperlink{classloadbalancer_a8754005b28e5d0800cd7048ed9caefa0}{increment\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Increments the system time by one unit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classloadbalancer_afd55bd66f471ecd3d0ea6bc23c690b58}{add\+Request}} (\mbox{\hyperlink{structrequest}{request}} r)
+\begin{DoxyCompactList}\small\item\em Adds a request to the load balancer\textquotesingle{}s request queue and increments the system time. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structrequest}{request}} \mbox{\hyperlink{classloadbalancer_a3d1715e4b2218a7aa9ad74e3e4fa6167}{get\+Request}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves and removes the next request from the load balancer\textquotesingle{}s request queue, if available. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classloadbalancer_a157774bcf936cd8d22ae15e69bf3149a}{is\+Request\+Queue\+Empty}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the request queue is empty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the distribution and processing of requests in a web server environment. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classloadbalancer_ad453fd2fc0c910f82ef31c18353fc774}\label{classloadbalancer_ad453fd2fc0c910f82ef31c18353fc774}} 
+\index{loadbalancer@{loadbalancer}!loadbalancer@{loadbalancer}}
+\index{loadbalancer@{loadbalancer}!loadbalancer@{loadbalancer}}
+\doxysubsubsection{\texorpdfstring{loadbalancer()}{loadbalancer()}}
+{\footnotesize\ttfamily loadbalancer\+::loadbalancer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor for the loadbalancer class. 
+
+Initializes the system time to 0. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classloadbalancer_afd55bd66f471ecd3d0ea6bc23c690b58}\label{classloadbalancer_afd55bd66f471ecd3d0ea6bc23c690b58}} 
+\index{loadbalancer@{loadbalancer}!addRequest@{addRequest}}
+\index{addRequest@{addRequest}!loadbalancer@{loadbalancer}}
+\doxysubsubsection{\texorpdfstring{addRequest()}{addRequest()}}
+{\footnotesize\ttfamily void loadbalancer\+::add\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrequest}{request}}}]{r }\end{DoxyParamCaption})}
+
+
+
+Adds a request to the load balancer\textquotesingle{}s request queue and increments the system time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The request to be added to the queue. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classloadbalancer_a3d1715e4b2218a7aa9ad74e3e4fa6167}\label{classloadbalancer_a3d1715e4b2218a7aa9ad74e3e4fa6167}} 
+\index{loadbalancer@{loadbalancer}!getRequest@{getRequest}}
+\index{getRequest@{getRequest}!loadbalancer@{loadbalancer}}
+\doxysubsubsection{\texorpdfstring{getRequest()}{getRequest()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrequest}{request}} loadbalancer\+::get\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves and removes the next request from the load balancer\textquotesingle{}s request queue, if available. 
+
+\begin{DoxyReturn}{Returns}
+The next request in the queue.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+If the request queue is empty, the behavior is undefined.
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+The next request in the queue. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classloadbalancer_afc308893c7ab0fc8b92036deae7a2de9}\label{classloadbalancer_afc308893c7ab0fc8b92036deae7a2de9}} 
+\index{loadbalancer@{loadbalancer}!getTime@{getTime}}
+\index{getTime@{getTime}!loadbalancer@{loadbalancer}}
+\doxysubsubsection{\texorpdfstring{getTime()}{getTime()}}
+{\footnotesize\ttfamily int loadbalancer\+::get\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the current system time. 
+
+\begin{DoxyReturn}{Returns}
+The current system time. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classloadbalancer_a157774bcf936cd8d22ae15e69bf3149a}\label{classloadbalancer_a157774bcf936cd8d22ae15e69bf3149a}} 
+\index{loadbalancer@{loadbalancer}!isRequestQueueEmpty@{isRequestQueueEmpty}}
+\index{isRequestQueueEmpty@{isRequestQueueEmpty}!loadbalancer@{loadbalancer}}
+\doxysubsubsection{\texorpdfstring{isRequestQueueEmpty()}{isRequestQueueEmpty()}}
+{\footnotesize\ttfamily bool loadbalancer\+::is\+Request\+Queue\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the request queue is empty. 
+
+\begin{DoxyReturn}{Returns}
+true if the request queue is empty, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+loadbalancer.\+h\item 
+loadbalancer.\+cpp\end{DoxyCompactItemize}

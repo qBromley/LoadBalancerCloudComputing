@@ -1,0 +1,122 @@
+\hypertarget{classwebserver}{}\doxysection{webserver Class Reference}
+\label{classwebserver}\index{webserver@{webserver}}
+
+
+Manages web server requests and tracks their processing status.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classwebserver_ae6f13a3cb80fe961cdaf70c7e03f36dc}{webserver}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the webserver class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classwebserver_af909efd5f3b665ae872974146958216e}{webserver}} (char c)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor for the webserver class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwebserver_a0fcaf406e460e8ea2c0a31b0e9abcfed}{add\+Req}} (\mbox{\hyperlink{structrequest}{request}} r, int current\+Time)
+\begin{DoxyCompactList}\small\item\em Adds a request to the webserver. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classwebserver_a382f65f1dec1e95e77b3fd9a7de7528b}{get\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the server ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structrequest}{request}} \mbox{\hyperlink{classwebserver_a8e97c299c64c0f9f46052a88888c7fc9}{get\+Request}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current request being processed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classwebserver_ad8037898ff683dace7963e402ac1ad46}{is\+Req\+Done}} (int curr\+Time)
+\begin{DoxyCompactList}\small\item\em Checks if the current request is completed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages web server requests and tracks their processing status. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classwebserver_ae6f13a3cb80fe961cdaf70c7e03f36dc}\label{classwebserver_ae6f13a3cb80fe961cdaf70c7e03f36dc}} 
+\index{webserver@{webserver}!webserver@{webserver}}
+\index{webserver@{webserver}!webserver@{webserver}}
+\doxysubsubsection{\texorpdfstring{webserver()}{webserver()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily webserver\+::webserver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor for the webserver class. 
+
+Initializes the request start time to 0 and sets the server ID to a space character. \mbox{\Hypertarget{classwebserver_af909efd5f3b665ae872974146958216e}\label{classwebserver_af909efd5f3b665ae872974146958216e}} 
+\index{webserver@{webserver}!webserver@{webserver}}
+\index{webserver@{webserver}!webserver@{webserver}}
+\doxysubsubsection{\texorpdfstring{webserver()}{webserver()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily webserver\+::webserver (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Parameterized constructor for the webserver class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The character to set as the server ID.\\
+\hline
+\end{DoxyParams}
+Initializes the request start time to 0 and assigns the provided character to the server ID. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classwebserver_a0fcaf406e460e8ea2c0a31b0e9abcfed}\label{classwebserver_a0fcaf406e460e8ea2c0a31b0e9abcfed}} 
+\index{webserver@{webserver}!addReq@{addReq}}
+\index{addReq@{addReq}!webserver@{webserver}}
+\doxysubsubsection{\texorpdfstring{addReq()}{addReq()}}
+{\footnotesize\ttfamily void webserver\+::add\+Req (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structrequest}{request}}}]{r,  }\item[{int}]{current\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a request to the webserver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The request object to be processed. \\
+\hline
+{\em current\+Time} & The current time at which the request is received.\\
+\hline
+\end{DoxyParams}
+Sets the request to be processed and records the time at which the request is added. \mbox{\Hypertarget{classwebserver_a382f65f1dec1e95e77b3fd9a7de7528b}\label{classwebserver_a382f65f1dec1e95e77b3fd9a7de7528b}} 
+\index{webserver@{webserver}!getID@{getID}}
+\index{getID@{getID}!webserver@{webserver}}
+\doxysubsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily char webserver\+::get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the server ID. 
+
+\begin{DoxyReturn}{Returns}
+The character representing the server ID. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwebserver_a8e97c299c64c0f9f46052a88888c7fc9}\label{classwebserver_a8e97c299c64c0f9f46052a88888c7fc9}} 
+\index{webserver@{webserver}!getRequest@{getRequest}}
+\index{getRequest@{getRequest}!webserver@{webserver}}
+\doxysubsubsection{\texorpdfstring{getRequest()}{getRequest()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrequest}{request}} webserver\+::get\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the current request being processed. 
+
+\begin{DoxyReturn}{Returns}
+The request object currently being processed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwebserver_ad8037898ff683dace7963e402ac1ad46}\label{classwebserver_ad8037898ff683dace7963e402ac1ad46}} 
+\index{webserver@{webserver}!isReqDone@{isReqDone}}
+\index{isReqDone@{isReqDone}!webserver@{webserver}}
+\doxysubsubsection{\texorpdfstring{isReqDone()}{isReqDone()}}
+{\footnotesize\ttfamily bool webserver\+::is\+Req\+Done (\begin{DoxyParamCaption}\item[{int}]{curr\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the current request is completed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em curr\+Time} & The current time to check against the request\textquotesingle{}s completion status. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the request processing is complete, false otherwise.
+\end{DoxyReturn}
+Determines if the request is finished by comparing the current time with the sum of the request start time and the request\textquotesingle{}s processing time. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Web\+Server.\+cpp\end{DoxyCompactItemize}
