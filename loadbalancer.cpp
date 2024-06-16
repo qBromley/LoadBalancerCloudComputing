@@ -46,6 +46,11 @@ request loadbalancer::getRequest()
         requestQueue.pop_front();
         return r;
     }
+    else
+    {
+        return request();
+    }
+    
 }
 
 /**
