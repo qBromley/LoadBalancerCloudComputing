@@ -80,6 +80,8 @@ public:
         return (currTime >= (requestStartTime + req.process_time));
     }
 
+    
+
 private:
     request req;             /**< The current request being processed. */
     int requestStartTime;    /**< The start time of the current request. */

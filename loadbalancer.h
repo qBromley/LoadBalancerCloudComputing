@@ -57,6 +57,9 @@ public:
      */
     bool isRequestQueueEmpty();
 
+    int queueSize();
+    
+
 private:
     int systemTime;                 /**< The current system time. */
     deque<request> requestQueue;    /**< The queue of requests to be processed. */

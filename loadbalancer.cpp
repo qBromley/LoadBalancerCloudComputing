@@ -40,16 +40,10 @@ void loadbalancer::addRequest(request r)
 request loadbalancer::getRequest()
 {
     incrementTime();
-    if (!requestQueue.empty())
-    {
-        request r = requestQueue.at(0);
-        requestQueue.pop_front();
-        return r;
-    }
-    else
-    {
-        return request();
-    }
+    request r = requestQueue.at(0);
+    requestQueue.pop_front();
+    return r;
+
     
 }
 
@@ -61,4 +55,9 @@ request loadbalancer::getRequest()
 bool loadbalancer::isRequestQueueEmpty()
 {
     return requestQueue.empty();
+}
+
+int loadbalancer::queueSize()
+{
+    return requestQueue.size(); 
 }

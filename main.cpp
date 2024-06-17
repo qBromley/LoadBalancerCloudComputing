@@ -20,7 +20,7 @@ request createRequest()
     ip_dest << (rand() % 256) << "." << (rand() % 256) << "." << (rand() % 256) << "." << (rand() % 256);
     r.ip_in = ip_inc.str();
     r.ip_out = ip_dest.str();
-    r.process_time = (rand() % 100);
+    r.process_time = (rand() % 150);
     return r;
 }
 
@@ -45,6 +45,7 @@ int main()
 
     std::ofstream logFile("log.txt", std::ios::trunc);
 
+   
     // Adding initial requests to the load balancer
     for (int i = 0; i < numServers * 100; i++)
     {
@@ -66,7 +67,7 @@ int main()
     while (lb.getTime() < runTime)
     {
         int currTime = lb.getTime();
-        if (webServerArr[currTime % numServers].isReqDone(currTime))
+        if (webServerArr[currTime % numServers].isReqDone(currTime) && !lb.isRequestQueueEmpty())
         {
             request r = webServerArr[currTime % numServers].getRequest();
             logFile << "Server " << webServerArr[currTime % numServers].getID() << " Processing request from " << r.ip_in << " to " << r.ip_out << " at Cycle " << currTime << std::endl;
@@ -81,6 +82,7 @@ int main()
         lb.incrementTime();
     }
 
+    logFile << "Starting Queue size = "<< numServers*100<<"\nEnding Queue size = "<<lb.queueSize()<<"\n Process time is anywere from 0 cycles to 150"<<endl;
     logFile.close();
 
     return 0;
